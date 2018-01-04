@@ -13,7 +13,7 @@ public:
 	double level, delta;
 	forward_list<LimitOrder> compensatedOrders;
 public:
-	
+
 	LimitOrder() {};
 	LimitOrder(int type, Price priceOpened, double level, int volume, double delta, int dcORos, int mode)
 	{
@@ -48,7 +48,7 @@ public:
 	void addCompensatedOrder(LimitOrder compensatedOrder) { compensatedOrders.push_front(compensatedOrder); }
 
 	void cleanCompensatedOrder() { compensatedOrders.clear(); }
-	
+
 	forward_list<LimitOrder> getCompensatedOrders() { return compensatedOrders; }
 
 };

@@ -18,6 +18,16 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AlphaEnginePanel.h" />
+    <ClInclude Include="CoastlineTrader.h" />
+    <ClInclude Include="LimitOrder.h" />
+    <ClInclude Include="LiquidityIndicator.h" />
+    <ClInclude Include="Price.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{01887CE8-FC63-4729-BDB7-4AFF5D842002}</ProjectGuid>
     <RootNamespace>AlphaEngine</RootNamespace>

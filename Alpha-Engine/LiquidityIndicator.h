@@ -58,7 +58,7 @@ public:
 		events = intrinsicEvent(price);
 		if (events != 0)
 		{//Symmetric surprise
-			//cout << events << endl;
+		 //cout << events << endl;
 			surp = alphaWeight * (abs(events) == 1 ? 0.08338161 : 2.525729) + (1.0 - alphaWeight) * surp;
 
 			if (events > 0) {//Downward surprises

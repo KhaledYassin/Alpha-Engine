@@ -36,10 +36,10 @@ public:
 		localLiquidityIndicator.liquidityEstimation(price);
 		mode = localLiquidityIndicator.getEvents();
 		toReturn = false;
-		if (!initialized && mode!=0)
+		if (!initialized && mode != 0)
 		{
 			inventory = 0;
-			initialized = true; 
+			initialized = true;
 			dcOros = mode;
 			putOrders(price);
 		}
@@ -58,7 +58,7 @@ public:
 			else
 			{
 				correctOrdersLevel(price);
-				toReturn = true; 
+				toReturn = true;
 			}
 			if (positionCrossedTargetPnL(price))
 			{
@@ -231,7 +231,7 @@ public:
 		{
 			if (price.getbid() < buyLimitOrder.getLevel())
 			{
-				dcOros = buyLimitOrder.getDcRos(); 
+				dcOros = buyLimitOrder.getDcRos();
 				putOrders(price);
 				buyFilled = true;
 				return buyFilled;
@@ -429,7 +429,7 @@ public:
 		{
 			marketPrice = (longShort == 1 ? price.getbid() : price.getask());
 			unrealizedProfit = 0.0;
-			tempList.clear(); 
+			tempList.clear();
 			tempList = disBalancedOrders;
 			for (auto i = disBalancedOrders.begin(); i != disBalancedOrders.end(); i++)
 			{
@@ -457,7 +457,7 @@ public:
 		orderPrice = (longShort == 1 ? price.getbid() : price.getask());
 		for (auto i = disBalancedOrders.begin(); i != disBalancedOrders.end(); i++)
 		{
-			tempObj = tempList.front(); 
+			tempObj = tempList.front();
 			priceMove = (orderPrice - tempObj.getLevel()) * tempObj.getType();
 			positionRealizedProfit += priceMove * tempObj.getVolume();
 			tempList.pop_front();

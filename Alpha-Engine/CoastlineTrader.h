@@ -468,7 +468,7 @@ public:
 
 	void computeTargetAbsPnL(LimitOrder firstCascadingOrder)
 	{
-		targetAbsPnL = firstCascadingOrder.getVolume() * firstCascadingOrder.getDelta() * firstCascadingOrder.getLevel();
+		//TODO
 	}
 
 	double getRealizedProfit() { return realizedProfit; }
